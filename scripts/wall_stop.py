@@ -1,4 +1,4 @@
-#!/usr/bin/env pythonmail.com>
+#!/usr/bin/env python
 import rospy,copy
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
