@@ -11,7 +11,6 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   std_srvs
-  message_generation
  #actionlib_msgs
 )
 
@@ -49,11 +48,11 @@ find_package(catkin REQUIRED COMPONENTS
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-  LightSensorValues.msg
-  MotorFreqs.msg
-)
+#add_message_files(
+  #FILES
+  #LightSensorValues.msg
+  #MotorFreqs.msg
+#)
 
 ## Generate services in the 'srv' folder
  add_service_files(
@@ -71,9 +70,9 @@ add_message_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
- generate_messages(
-   DEPENDENCIES
-   std_msgs
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
  )
 
 ################################################
@@ -108,7 +107,7 @@ add_message_files(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pimouse_ros
-  CATKIN_DEPENDS rospy std_msgs std_srvs  message_runtime
+#  CATKIN_DEPENDS rospy std_msgs std_srvs  message_runtime
 #  DEPENDS system_lib
 )
 
