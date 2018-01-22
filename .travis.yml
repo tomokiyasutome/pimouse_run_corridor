@@ -1,11 +1,11 @@
+language: python
 sudo: required
 dist: trusty
 group: deprecated-2017Q4
-
+before_install: sudo apt install python-pip 
 script:
   - bash -xve ./test/travis_ros_install.bash
   - source ~/catkin_ws/devel/setup.bash
   - bash -xve ./test/travis_package_make.bash
   - source ~/catkin_ws/devel/setup.bash
-  - bash -xve ./test/travis_prepare_dummy_files.bash
   - rostest pimouse_run_corridor wall_stop.launch
